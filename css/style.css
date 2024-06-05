@@ -1,0 +1,23 @@
+:root {
+  --charcoal: #394B61;
+  --blue-gray: #5E91C4;
+  --uranian-blue: #BCDAFA;
+  --baby-powder: #F8F7F2;
+  --flame: #EB5E28;
+}
+
+#login {
+  height: 100%;
+  background-color: var(--charcoal) !important;
+}
+
+#login .row {
+  height: 100%;
+}
+
+.img-login {
+  box-sizing: border-box;
+  margin: 32px;
+  height: auto;
+  background-position: center;
+}
