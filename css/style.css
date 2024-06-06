@@ -1,9 +1,14 @@
 :root {
   --charcoal: #394B61;
+  --charcoal-dark: #263241;
   --blue-gray: #5E91C4;
   --uranian-blue: #BCDAFA;
   --baby-powder: #F8F7F2;
   --flame: #eb5e28;
+  --header-height: 3rem;
+  --nav-width: 68px;
+  --normal-font-size: 1rem;
+  --z-fixed: 100
 }
 
 @font-face {
@@ -30,6 +35,7 @@ body {
   background-image: linear-gradient(rgba(57, 75, 97, 0.80), rgba(57, 75, 97, 0.80)),
     url('/img/background-login.jpg');
   width: 100%;
+  border-radius: 16px;
 }
 
 .logo-login {
@@ -44,7 +50,7 @@ body {
 
 .btn-primary {
   background-color: var(--flame) !important;
-  border-color: var(--flame);
+  border-color: var(--flame) !important;
 }
 
 .btn-outline-secondary {
@@ -71,10 +77,154 @@ a {
   color: var(--uranian-blue) !important;
 }
 
-@media (min-width: 768px) {}
+a svg {
+  color: var(--baby-powder) !important;
+}
 
-@media (min-width: 992px) {}
+.nav_list a {
+  text-decoration: none !important;
+  font-size: 14px;
+}
 
-@media (min-width: 1200px) {}
+.header {
+  width: 100%;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  background-color: transparent;
+  z-index: var(--z-fixed);
+  transition: .5s
+}
 
-@media (min-width: 1400px) {}
+.header_toggle {
+  display: flex;
+  justify-content: center;
+  color: var(--first-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.header a {
+  color: var(--baby-powder) !important;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.l-navbar {
+  position: fixed;
+  top: 0;
+  left: -30%;
+  width: var(--nav-width);
+  height: 100vh;
+  background-color: var(--charcoal-dark);
+  padding: .5rem 1rem 0 0;
+  transition: .5s;
+  z-index: var(--z-fixed)
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden
+}
+
+.nav_link {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  column-gap: 1rem;
+  font-size: 14px !important;
+  padding: 1rem;
+}
+
+.nav_name {
+  font-size: 14px;
+}
+
+.nav_logo {
+  margin-bottom: 2rem
+}
+
+.nav_logo-icon {
+  font-size: 1.25rem;
+  color: var(--white-color)
+}
+
+.nav_logo-name {
+  color: var(--white-color);
+  font-weight: 700
+}
+
+.nav_link {
+  position: relative;
+  color: var(--first-color-light);
+  margin-bottom: 1.5rem;
+  transition: .3s
+}
+
+.nav_link:hover {
+  color: var(--white-color)
+}
+
+.nav_icon {
+  font-size: 1.25rem
+}
+
+.show {
+  left: 0
+}
+
+
+.active {
+  color: var(--white-color)
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 32px;
+  background-color: var(--white-color)
+}
+
+.btn-search {
+  background-color: transparent !important;
+}
+
+.btn-search::placeholder {
+  color: var(--baby-powder);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: calc(var(--header-height) + 1.5rem) 0 0 0;
+    padding-left: calc(var(--nav-width) + 0rem)
+  }
+
+  .header {
+    height: calc(var(--header-height) + 1.5rem);
+    padding: 0 2rem 0 calc(var(--nav-width) + 2rem)
+  }
+
+  .l-navbar {
+    left: 0;
+    padding: 1rem
+  }
+
+  .show {
+    width: calc(var(--nav-width) + 156px)
+  }
+
+  .body-pd {
+    padding-left: calc(var(--nav-width) + 188px)
+  }
+}
