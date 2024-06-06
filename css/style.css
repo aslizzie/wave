@@ -3,21 +3,78 @@
   --blue-gray: #5E91C4;
   --uranian-blue: #BCDAFA;
   --baby-powder: #F8F7F2;
-  --flame: #EB5E28;
+  --flame: #eb5e28;
 }
 
-#login {
-  height: 100%;
+@font-face {
+  font-family: Montserrat;
+  src: url('/fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+* {
+  font-family: Montserrat;
+  font-size: 13px;
+}
+
+body {
   background-color: var(--charcoal) !important;
+  color: var(--baby-powder) !important;
 }
 
-#login .row {
-  height: 100%;
+.h-100 {
+  height: 100% !important;
 }
 
-.img-login {
+.div-login {
   box-sizing: border-box;
-  margin: 32px;
-  height: auto;
-  background-position: center;
+  background-image: linear-gradient(rgba(57, 75, 97, 0.80), rgba(57, 75, 97, 0.80)),
+    url('/img/background-login.jpg');
+  width: 100%;
 }
+
+.logo-login {
+  height: 30px;
+  width: auto;
+}
+
+.form-control:focus {
+  border-color: var(--flame) !important;
+  box-shadow: none !important;
+}
+
+.btn-primary {
+  background-color: var(--flame) !important;
+  border-color: var(--flame);
+}
+
+.btn-outline-secondary {
+  border-color: var(--uranian-blue) !important;
+  color: var(--uranian-blue) !important;
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--uranian-blue) !important;
+  color: var(--charcoal) !important;
+}
+
+.form-check-input:checked {
+  background-color: var(--flame) !important;
+  border-color: var(--flame) !important;
+}
+
+.form-check-input:focus {
+  border-color: var(--flame) !important;
+  box-shadow: none !important;
+}
+
+a {
+  color: var(--uranian-blue) !important;
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1400px) {}
