@@ -166,7 +166,6 @@ a svg {
 .nav_link {
   position: relative;
   color: var(--first-color-light);
-  margin-bottom: 1.5rem;
   transition: .3s
 }
 
@@ -221,9 +220,60 @@ a svg {
   z-index: -1;
 }
 
+.carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  width: 40%;
+  height: 250px !important;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.carousel-cell img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.flickity-button {
+  background-color: transparent !important;
+  color: white !important;
+}
+
+@media (min-width: 576px) {
+  .carousel-cell {
+    width: 30%;
+    height: 300px !important;
+  }
+
+  .carousel-cell img {
+    height: 300px;
+  }
+}
+
+@media (min-width: 768px) {
+  .carousel-cell {
+    width: 25%;
+  }
+}
+
+@media (min-width: 992px) {
+  .carousel-cell {
+    width: 15%;
+    height: 300px !important;
+  }
+}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1400px) {}
+
 @media screen and (min-width: 768px) {
   body {
-    padding-left: calc(var(--nav-width) + 0rem)
+    padding-left: calc(var(--nav-width))
   }
 
   .header {
@@ -237,10 +287,10 @@ a svg {
   }
 
   .show {
-    width: calc(var(--nav-width) + 156px)
+    width: calc(var(--nav-width) + 100px)
   }
 
   .body-pd {
-    padding-left: calc(var(--nav-width) + 188px)
+    padding-left: calc(var(--nav-width) + 100px)
   }
 }

@@ -5,10 +5,12 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>wave</title>
+
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
-    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <link rel="stylesheet" href="/css/flickity.css">
+
+    <script src="/js/jquery-3.7.1.min.js"></script>
 </head>
 
 
@@ -38,17 +40,17 @@
         </div>
     </header>
     <div class="l-navbar" id="nav-bar">
-        <div class="header_toggle">
+        <!-- <div class="header_toggle">
             <svg id="header-toggle" width="24" height="24" viewBox="0 0 444 314" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M220.171 123.445L168.48 313.568H86.1749L0.652832 0.763306H92.1648L145.741 220.17L190.443 0.763306H272.748L327.434 226.049L380.233 0.763306H443.681L348.842 313.568H266.537L220.171 123.445Z"
                     fill="#EB5E28" />
             </svg>
-        </div>
+        </div> -->
         <nav class="nav">
             <div class="nav_list">
-                <a href="#" class="nav_link active">
+                <a href="#" class="nav_link ps-2 active">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                         class="bi bi-house-door-fill" viewBox="0 0 16 16">
                         <path
@@ -57,7 +59,7 @@
                     <span class="nav_name">Inicio</span>
                 </a>
 
-                <a href="#" class="nav_link">
+                <a href="#" class="nav_link ps-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                         class="bi bi-grid-fill" viewBox="0 0 16 16">
                         <path
@@ -70,14 +72,14 @@
     </div>
     <!--Container Main start-->
     <div>
-        <div id="hero-section">
-            <div id="carouselHeroSection" class="carousel slide">
-                <div class="carousel-inner">
-                    <div class="carousel-item active position-relative">
-                        <div class="opacity">
+        <section>
+            <div id="hero-section">
+                <div id="carouselHeroSection" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
                             <img src="/img/movie-1.jpg" class="d-block w-100" alt="...">
                             <div class="position-absolute bottom-0 start-0 m-5">
-                                <h4>Los juegos del hambre</h4>
+                                <h4 class="mb-2">Los juegos del hambre</h4>
                                 <p class="fs-5"> 142 minutos </p>
                                 <button class="btn btn-primary px-5">
                                     Ver
@@ -96,32 +98,331 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/movie-2.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/movie-3.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-item">
+                            <img src="/img/movie-2.jpg" class="d-block w-100" alt="...">
+                            <div class="position-absolute bottom-0 start-0 m-5">
+                                <h4 class="mb-2">Interestelar</h4>
+                                <p class="fs-5"> 169 minutos </p>
+                                <button class="btn btn-primary px-5">
+                                    Ver
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-arrow-right ms-3" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                    </svg>
+                                </button>
+                                <button class="btn btn-outline-secondary ms-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-heart" viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/img/movie-3.jpg" class="d-block w-100" alt="...">
+                            <div class="position-absolute bottom-0 start-0 m-5">
+                                <h4 class="mb-2">Maze runner: correr o morir </h4>
+                                <p class="fs-5"> 112 minutos </p>
+                                <button class="btn btn-primary px-5">
+                                    Ver
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-arrow-right ms-3" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                    </svg>
+                                </button>
+                                <button class="btn btn-outline-secondary ms-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-heart" viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselHeroSection"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselHeroSection"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
-        </div>
+        </section>
+
+        <section>
+            <div class="container my-5">
+                <h4 class="mb-3">Tendencias</h4>
+
+                <div class="trend-carousel">
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-4.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-5.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-6.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-7.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-8.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-9.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-10.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-11.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-12.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-13.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container my-5">
+                <h4 class="mb-3">Para ti</h4>
+
+                <div class="you-carousel">
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-14.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-15.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-16.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-17.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-18.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-19.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-20.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-21.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-22.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-11.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container my-5">
+                <h4 class="mb-3">Continuar viendo</h4>
+
+                <div class="watching-carousel">
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-11.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-12.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container my-5">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h4 class="mb-3">Peliculas</h4>
+                    <p class="fs-6">Ver todo
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                        </svg>
+                    </p>
+                </div>
+
+                <div class="movies-carousel">
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-23.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-18.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-16.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-23.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-12.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-19.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-20.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-13.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/movie-6.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container my-5">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h4 class="mb-3">Series</h4>
+                    <p class="fs-6">Ver todo
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                        </svg>
+                    </p>
+                </div>
+
+                <div class="series-carousel">
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/serie-1.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/serie-2.jpeg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/serie-3.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/serie-4.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/serie-5.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/serie-6.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/serie-7.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/serie-8.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/serie-9.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <a href="">
+                            <img src="/img/serie-10.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
     <!--Container Main end-->
     <script type='text/javascript'
         src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
 
     <script src="/js/main.js"></script>
+    <script src="/js/flickity.pkgd.min.js"></script>
+    <script src="/js/carousel.js"></script>
 </body>
 
 </html>
