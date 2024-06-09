@@ -29,25 +29,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   showNavbar("header-toggle", "nav-bar", "body-pd", "header", "collapseCategories", "collapseProfile");
 
-  const linkColor = document.querySelectorAll(".nav_link");
-
-  function colorLink() {
-    if (linkColor) {
-      linkColor.forEach((l) => l.classList.remove("active"));
-      this.classList.add("active");
-    }
-  }
-
-  linkColor.forEach((l) => l.addEventListener("click", colorLink));
-
   const favoriteButtons = document.querySelectorAll(".btn-outline-secondary");
 
   let favoriteMovies = JSON.parse(localStorage.getItem("favoriteMovies")) || {};
 
   favoriteButtons.forEach(function (favoriteButton) {
     favoriteButton.addEventListener("click", function () {
-      const movieTitle = favoriteButton.closest(".carousel-item").querySelector("h4").textContent;
+      const movieTitle = favoriteButton.closest(".carousel-item").querySelector("h4").textContent.trim();
       const movieImageUrl = favoriteButton.closest(".carousel-item").querySelector("img").getAttribute("data-poster");
+      const movieUrl = favoriteButton.closest(".carousel-item").querySelector("img").getAttribute("data-url");
 
       if (favoriteButton.classList.contains("favorite")) {
         favoriteButton.classList.remove("favorite");
@@ -56,14 +46,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
         favoriteButton.classList.add("favorite");
         favoriteMovies[movieTitle] = {
           isFavorite: true,
-          imageUrl: movieImageUrl
+          imageUrl: movieImageUrl,
+          url: movieUrl
         };
       }
 
       localStorage.setItem("favoriteMovies", JSON.stringify(favoriteMovies));
     });
 
-    const movieTitle = favoriteButton.closest(".carousel-item").querySelector("h4").textContent;
+    const movieTitle = favoriteButton.closest(".carousel-item").querySelector("h4").textContent.trim();
     if (favoriteMovies[movieTitle] && favoriteMovies[movieTitle].isFavorite) {
       favoriteButton.classList.add("favorite");
     }
@@ -91,10 +82,30 @@ document.addEventListener("DOMContentLoaded", function (event) {
       divFavorites.innerHTML = htmlContent;
 
     } else {
-      divFavorites.innerHTML = "<p>No hay datos en el localStorage.</p>";
+      divFavorites.innerHTML = "<div class='w-100 my-5'> <h5 class='text-center'>¡No hay nada aquí... todavía!</h5> <h5 class='text-center fw-light'>Añade tus películas y series favoritas y vuelve a disfrutar de ellas una y otra vez. Ve al <a class='fs-5' href='/home.html'> inicio</a> para ver todo nuestro contenido.</h5> </div>";
     }
   }
 
+  const navLinks = document.querySelectorAll(".nav_link, .menu-option");
+  const currentPath = window.location.pathname;
+
+  navLinks.forEach(function (navLink) {
+    if (navLink.getAttribute("href") === currentPath) {
+      navLink.classList.add("active");
+    }
+  });
+
+  if (currentPath === "/favorites.html" || currentPath === "/series.html" || currentPath === "/movies.html") {
+  } else {
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector('.header');
+      if (window.scrollY > 300) {
+        header.classList.add("solid");
+      } else {
+        header.classList.remove("solid");
+      }
+    });
+  }
 });
 
 

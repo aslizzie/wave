@@ -4,7 +4,8 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>wave</title>
+    <title>WAVE</title>
+    <link rel="icon" type="image/x-icon" href="/img/logos/favicon.png">
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
@@ -17,12 +18,12 @@
 <body id="body-pd">
     <header class="header" id="header">
         <div class="row w-100">
-            <div class="col-6 d-flex justify-content-evenly align-items-center">
-                <a href="">Series</a>
-                <a href="">Peliculas</a>
+            <div class="col-6 d-flex justify-content-start align-items-center">
+                <a class="ms-4 me-5" href="/series.html">Series</a>
+                <a href="/movies.html">Peliculas</a>
             </div>
-            <div class="col-3"></div>
-            <div class="col-3">
+            <div class="col-1 col-md-3"></div>
+            <div class="col-5 col-md-3">
                 <div class="input-group rounded">
                     <input type="search" class="form-control rounded btn-search" placeholder="Buscar"
                         aria-label="Search" aria-describedby="search-addon" />
@@ -38,13 +39,13 @@
             </div>
         </div>
     </header>
-    <div class="l-navbar" id="nav-bar">
+    <div class="l-navbar d-none d-md-block" id="nav-bar">
         <div class="header_toggle mt-2">
             <img id="header-toggle" src="/img/logos/icon.png" class="nav-img">
         </div>
         <nav class="nav mt-5">
             <div class="nav_list">
-                <a href="/home.html" class="nav_link active">
+                <a href="/home.html" class="nav_link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                         class="bi bi-house-door-fill" viewBox="0 0 16 16">
                         <path
@@ -73,17 +74,14 @@
                     </div>
                 </div>
 
-                <a href="#" class="nav_link">
+                <a href="/favorites.html" class="nav_link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                         class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
                         <path
                             d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1" />
                     </svg>
                     <span class="nav_name">Favoritos</span>
-
                 </a>
-
-                <hr>
 
                 <a data-bs-toggle="collapse" href="#collapseProfile" role="button" aria-expanded="false"
                     aria-controls="collapseProfile" class="nav_link">
@@ -106,13 +104,59 @@
         </nav>
     </div>
 
+    <div class="fixed-bottom small-menu row d-md-none">
+        <div class="col-3">
+            <a href="/home.html" class="menu-option d-flex flex-column align-items-center">
+                <svg xmlns=" http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+                </svg>
+                <span class="nav_name">Inicio</span>
+            </a>
+        </div>
+        <div class="col-3">
+            <a href="/categories.html" class="menu-option d-flex flex-column align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-grid-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5z" />
+                </svg>
+                <span class="nav_name">Categorías</span>
+            </a>
+        </div>
+        <div class="col-3">
+            <a href="/favorites.html" class="menu-option d-flex flex-column align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1" />
+                </svg>
+                <span class="nav_name">Favoritos</span>
+            </a>
+        </div>
+        <div class="col-3">
+            <a href="#" class="menu-option d-flex flex-column align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                    <path fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                </svg>
+                <span class="nav_name">Diana</span>
+            </a>
+        </div>
+    </div>
+
+
     <div>
         <section>
             <div id="hero-section">
                 <div class="carousel-inner">
                     <div class="carousel-item active position-relative">
                         <div class="opacity"></div>
-                        <img src="/img/movie-26.jpg" class="d-block w-100" alt="...">
+                        <img src="/img/movie-26.jpg" class="d-block w-100" data-poster="/img/movie-29.jpg"
+                            data-url="/movies/hunger-games.html">
                         <div class="position-absolute bottom-0 start-0 m-5">
                             <h4 class="mb-2"> Los juegos del hambre </h4>
                             <p class="fs-5"> 142 minutos </p>
