@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>wave</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/flickity.css">
+
+    <script src="/js/jquery-3.7.1.min.js"></script>
+</head>
+
+
+<body id="body-pd">
+    <header class="header" id="header">
+        <div class="row w-100">
+            <div class="col-6 d-flex justify-content-evenly align-items-center">
+                <a href="">Series</a>
+                <a href="">Peliculas</a>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-3">
+                <div class="input-group rounded">
+                    <input type="search" class="form-control rounded btn-search" placeholder="Buscar"
+                        aria-label="Search" aria-describedby="search-addon" />
+                    <span class="input-group-text border-0 btn-search position-absolute top-50 end-0 translate-middle-y"
+                        id="search-addon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--baby-powder)"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="l-navbar" id="nav-bar">
+        <div class="header_toggle mt-2">
+            <img id="header-toggle" src="/img/logos/icon.png" class="nav-img">
+        </div>
+        <nav class="nav mt-5">
+            <div class="nav_list">
+                <a href="/home.html" class="nav_link active">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+                    </svg>
+                    <span class="nav_name">Inicio</span>
+                </a>
+
+                <a data-bs-toggle="collapse" href="#collapseCategories" role="button" aria-expanded="false"
+                    aria-controls="collapseCategories" class="nav_link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-grid-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5z" />
+                    </svg>
+                    <span class="nav_name">Categorías</span>
+                </a>
+
+                <div class="collapse d-none" id="collapseCategories">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-action">Acción</button>
+                        <button type="button" class="list-group-item list-group-item-action">Ciencia ficción</button>
+                        <button type="button" class="list-group-item list-group-item-action"> Comedia </button>
+                        <button type="button" class="list-group-item list-group-item-action">Drama</button>
+                        <button type="button" class="list-group-item list-group-item-action"> Musical </button>
+                    </div>
+                </div>
+
+                <a href="#" class="nav_link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1" />
+                    </svg>
+                    <span class="nav_name">Favoritos</span>
+
+                </a>
+
+                <hr>
+
+                <a data-bs-toggle="collapse" href="#collapseProfile" role="button" aria-expanded="false"
+                    aria-controls="collapseProfile" class="nav_link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                    </svg>
+                    <span class="nav_name">Diana</span>
+                </a>
+                <div class="collapse d-none" id="collapseProfile">
+                    <div class="list-group">
+                        <button type="button" class="list-group-item list-group-item-action">Mi perfil</button>
+                        <button type="button" class="list-group-item list-group-item-action">Configuración</button>
+                        <button type="button" class="list-group-item list-group-item-action"> Cerrar sesión </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div>
+        <section>
+            <div id="hero-section">
+                <div class="carousel-inner">
+                    <div class="carousel-item active position-relative">
+                        <div class="opacity"></div>
+                        <img src="/img/movie-28.jpg" class="d-block w-100" alt="...">
+                        <div class="position-absolute bottom-0 start-0 m-5">
+                            <h4 class="mb-2"> Maze runner: correr o morir </h4>
+                            <p class="fs-5"> 112 minutos </p>
+                            <button class="btn btn-primary px-5">
+                                Ver
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-right ms-3" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                                </svg>
+                            </button>
+                            <button class="btn btn-outline-secondary ms-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-suit-heart-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container my-5">
+                <div>
+                    <h4 class="mb-3">Sinopsis</h4>
+                    <p class="fs-5"> Thomas es un adolescente cuya memoria fue borrada y que ha sido encerrado junto a
+                        otros chicos de su edad en un laberinto plagado de monstruos y misterios. Para sobrevivir,
+                        tendrá que adaptarse a las normas y a los demás habitantes del laberinto. </p>
+                </div>
+
+                <hr class="my-5">
+                <h4 class="mb-3">Recomendaciones</h4>
+
+                <div class="movies-carousel">
+                    <div class="carousel-cell">
+                        <div class="opacity-carousel"></div>
+                        <a href="">
+                            <img src="/img/movie-23.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="opacity-carousel"></div>
+                        <a href="">
+                            <img src="/img/movie-18.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="opacity-carousel"></div>
+                        <a href="">
+                            <img src="/img/movie-16.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="opacity-carousel"></div>
+                        <a href="">
+                            <img src="/img/movie-23.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="opacity-carousel"></div>
+                        <a href="">
+                            <img src="/img/movie-12.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="opacity-carousel"></div>
+                        <a href="">
+                            <img src="/img/movie-19.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="opacity-carousel"></div>
+                        <a href="">
+                            <img src="/img/movie-20.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="opacity-carousel"></div>
+                        <a href="">
+                            <img src="/img/movie-13.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="opacity-carousel"></div>
+                        <a href="">
+                            <img src="/img/movie-6.jpg" alt="" srcset="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/flickity.pkgd.min.js"></script>
+    <script src="/js/carousel.js"></script>
+</body>
+
+</html>
