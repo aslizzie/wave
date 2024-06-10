@@ -28,32 +28,32 @@ A continuación, se muestran capturas de pantalla del proyecto y una breve expli
 
 ###### Vista - Inicio de sesión
 
-![Markdown logo](documentation\login.png)
+![Markdown logo](documentation/login.png)
 En esta captura se muestra el inicio de sesión del hub de entretenimiento.
 
 ###### Vista - Inicio
 
-![Markdown logo](documentation\home.png)
+![Markdown logo](documentation/home.png)
 Después de que el usuario inicie sesión, se le mostrará la vista de inicio que se muestra en la captura. En la parte superior se muestra una sección con lo que corresponde a las películas más populares y más abajo aparecen carruseles con el catálogo de películas y series.
 
 ###### Vista - Series
 
-![Markdown logo](documentation\series.png)
+![Markdown logo](documentation/series.png)
 En esta captura se muestra la vista donde aparecen todas las series disponibles.
 
 ###### Vista - Películas
 
-![Markdown logo](documentation\movies.png)
+![Markdown logo](documentation/movies.png)
 En esta captura se muestra la vista donde aparecen todas las películas disponibles.
 
 ###### Vista - Película
 
-![Markdown logo](documentation\movie.png)
+![Markdown logo](documentation/movie.png)
 En esta captura se muestra la vista de una película.
 
 ###### Vista - Favoritos
 
-![Markdown logo](documentation\favorites.png)
+![Markdown logo](documentation/favorites.png)
 En esta captura se muestra la vista donde aparecen todas las películas favoritas del usuario.
 
 _**Nota**: la información que se encuentra en el proyecto esta hardcodeada, por lo tanto no todas las películas y series mostradas tienen la funcionalidad para agregarlas a favoritos y para ver su información de manera individual, las únicas que cuentan con estas funcionalidades son las mostradas en la captura anterior._
@@ -72,8 +72,6 @@ Luego de tener toda la idea de lo que quería para mi proyecto, comencé con su 
 
 ##### Sprint review
 
-| Columna 1       | Columna 2       | Columna 3       |
-| --------------- | --------------- | --------------- |
-| Fila 1, Celda 1 | Fila 1, Celda 2 | Fila 1, Celda 3 |
-| Fila 2, Celda 1 | Fila 2, Celda 2 | Fila 2, Celda 3 |
-| Fila 3, Celda 1 | Fila 3, Celda 2 | Fila 3, Celda 3 |
+| ¿Qué salió bien?                                                                                  | ¿Qué puedo hacer diferente?                                                                                                                                                                                                                                                     | ¿Qué no salió bien?                                                                                                                        |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Lo que considero que salió bien fue que logré plasmar la idea que tenía de mi proyecto en código. | Lo que considero que podría hacer diferente es la manera en que estoy manejando la información del proyecto, ya que todo se encuentra hardcodeado y así es más díficil hacer dinámico mi proyecto, también considero que podría organizar mejor mis tiempos para el desarrollo. | Lo que considero que no salió bien fue la organización de mis tiempos, siento que no me organicé tan bien para el desarrollo del proyecto. |
